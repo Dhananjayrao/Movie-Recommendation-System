@@ -1,7 +1,5 @@
 from moviechanges import db, login_manager
 from flask_login import UserMixin   #for session management and authorization
-
-
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))    #for getting a user by id
